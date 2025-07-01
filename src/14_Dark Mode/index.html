@@ -18,10 +18,10 @@
       type="image/x-icon"
     />
   </head>
-  <body>
+  <body class="body overflow-x-hidden bg-white text-black">
     <div
       id="container"
-      class="container px-0 md:px-10 lg:px-48 md:w-screen bg-white text-black transition-all duration-500 ease-in-out"
+      class="container mx-auto md:px-10 lg:px-48 w-full transition-all duration-500 ease-in-out"
     >
       <nav class="relative flex justify-between pt-2 lg:pt-3 items-center">
         <a href="#home">
@@ -29,10 +29,9 @@
         </a>
 
         <!--! For Mobile Screens-->
-
         <ul
           id="mobile-ul"
-          class="absolute top-0 right-0 z-50 w-screen items-center flex-col bg-orange-600 hidden justify-evenly gap-4 py-4"
+          class="absolute z-50 top-0 left-0 right-0 w-full flex-col bg-orange-600 hidden justify-evenly gap-4 py-4 items-center"
         >
           <li>
             <i
@@ -59,8 +58,7 @@
           </li>
         </ul>
 
-        <!--! Bor Bigger Screens-->
-
+        <!--! For Bigger Screens-->
         <ul
           class="flex flex-row justify-evenly items-center gap-4 lg:gap-8 px-5 py-2 lg:px-0 lg:py-0 lg:bg-none"
         >
@@ -79,21 +77,21 @@
           <li class="hidden md:block lg:block">
             <a href="#hire-me" class="hover:text-orange-600">Hire Me</a>
           </li>
-          <li class="hidden md:block lg:block"></li>
           <li>
             <i
-              class="fa-solid fa-sun cursor-pointer transition-all duration-300 ease-in-out"
+              class="fa-solid fa-moon cursor-pointer transition-all duration-300 ease-in-out"
               id="theme-toggle"
             ></i>
           </li>
           <li>
             <i
               id="show-menu"
-              class="fa-solid fa-bars curswhite block md:hidden lg:hidden"
+              class="fa-solid fa-bars cursor-pointer block md:hidden lg:hidden"
             ></i>
           </li>
         </ul>
       </nav>
+
       <!--! Main Content Section-->
       <div
         class="main-content px-4 lg:px-0 flex flex-col lg:flex-row items-center justify-between mt-10"
@@ -110,7 +108,7 @@
           <button
             class="border-2 border-orange-600 rounded-sm font-bold px-3 py-2 hover:rounded-full transition-all ease-in-out duration-300"
           >
-            <a href="#"></a>Download CV
+            <a href="#">Download CV</a>
           </button>
           <div class="text-2xl cursor-pointer">
             <i class="fab fa-linkedin hover:text-blue-600"></i>
@@ -118,22 +116,24 @@
             <i class="fas fa-envelope hover:text-purple-500"></i>
           </div>
         </div>
-        <div class="relative px-8 h-auto overflow-hidden group cursor-cell">
+
+        <div class="relative h-auto overflow-hidden group cursor-cell">
           <img
             id="background-image"
-            class="absolute w-60 lg:w-96 transition-transform duration-300 group-hover:-translate-x-4"
+            class="absolute w-60 lg:w-96 max-w-full transition-transform duration-300 group-hover:-translate-x-4"
             src="img/pattern.png"
             alt=""
           />
           <img
             id="main-image"
-            class="relative w-52 lg:w-96 transition-transform duration-300 group-hover:translate-x-4"
+            class="relative w-52 lg:w-96 max-w-full transition-transform duration-300 group-hover:translate-x-4"
             src="img/Remove background project.png"
             alt=""
           />
         </div>
       </div>
     </div>
+
     <!--! footer -->
     <footer class="bg-gray-800 text-white py-4">
       <div class="mx-auto flex flex-col gap-1 items-center justify-between">
@@ -143,6 +143,6 @@
         <div id="clock" class="text-sm mt-2 md:mt-0"></div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
